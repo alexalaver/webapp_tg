@@ -8,7 +8,7 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    markup.add(types.KeyboardButton("Открыть веб-страницу", web_app=WebAppInfo(url="https://vk.ru/")))
+    markup.add(types.KeyboardButton("Открыть веб-страницу", web_app=WebAppInfo(url="https://github.com/alexalaver/webapp_tg/blob/main/index.html")))
     await message.answer("Привет мой друг", reply_markup=markup)
 
 if __name__ == "__main__":
