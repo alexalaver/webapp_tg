@@ -1,53 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
-F
-* {
-    margin: 0;
-    padding; 0;
-    box-sizing: border-box;
+body { /* Стиль для блока body */
+    background: #2c2c2c;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    color: var(--tg-theme-text-color);
-    background: var(--tg-theme-bg-color);
+aside { /* Стиль для всех объектов находящихся в блоке aside */
+    float: left;
+    background: #181818; /* Цвет фона */
+    width: 20%; /* Размер */
+    padding: 2.5%; /* Отступ */
+    height: 100vh; /* Ширина */
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
 }
 
-#main {
-    width: 100%;
-    padding: 20px;
+aside img { /* Стиль для всех img */
+    width: 55px; /* Размер фото */
+    height: auto; /* Автоматически устанавливает размер ширину */
+    float: left; /* Местоположение, left-значит текст будет слева */
+    margin-left: -10px;
+}
+
+aside .logo { /* Стиль для span с названием logo */
+    color: #fff;
+    font-size: 30px; /* Размер текста */
+    margin-left: 1px;
+    font-weight: bold; /* Жирность шрифта */
+    position: relative; /* Задаёт позицию элементов относительно его нормального расположения */
+    top: 5px; /* Отступ сверху */
+}
+
+aside .logo: hover {
+    text-decoration: none;
+}
+
+aside h3 { /* Стиль для всех h3 */
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+aside ul { /* Стиль для всех ul */
+    list-style: none; /* Отключение стиля */
+}
+
+aside ul li { /* Стиль для в всех li которые находятся в ul */
+    color: #fff;
+    display: block;
+    margin-left: -20px; /* Отступ слева */
+    margin-top: 23px; /* Отступ от вверха */
+    transition: transform .6s ease; /* Для всех стилей добавляется плавность анимации */
+}
+
+aside ul li:hover, aside ul a:hover { /* При наведении на текст анимация */
+    color: #D89D00;
+    text-decoration: none; /* Убираем нижнее подчёркиваниее при наведении на текст */
+    transform: scale(1.05); /* Увеличивает текст при наведении на процентов которые указаны в scale(x) */
+}
+
+main .features {
+    float: left;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center; /* Позиция текста */
+    width: 75%; /* Ширина */
+}
+
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 700px; margin: 20px auto}
+
+main .features button {
+    transition: transform .6s ease; /* Для всех стилей добавляется плавность анимации */
+}
+main .features button:hover {
+    transform: scale(1.05);
+}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 500px;
+    margin: 20px 27%;
     text-align: center;
 }
 
-h1 {
+form {
+    margin-left: 29%;
     margin-top: 50px;
-    margin-bottom: 10px;
-}
-
-img {
-    width: 70px;
-    margin: 30px auto;
-}
-
-p {
-    width: 350px;
-    margin: 0 auto;
-}
-
-button {
-    border: 0;
-    border-radius: 5px;
-    margin-top: 50px;
-    height: 60px;
-    width: 200px;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 500ms ease;
-    color: var(--tg-theme-button-color);
-    background: var(--tg--theme-button-text-color);
-}
-
-button:hover {
-    background: var(--tg-theme-secondary-bg-color);
+    width: 500px;
 }
